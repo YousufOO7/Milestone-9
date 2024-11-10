@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import './App.css'
-import { auth } from './firebase_confing';
+import { auth } from './firebase_config';
 import { useState } from 'react';
 
 function App() {
@@ -27,10 +27,8 @@ function App() {
         <div>
           <button onClick={handleLogin}>Login</button>
           <h2>Name: {user.displayName}</h2>
-          <div>
-            <h5>image</h5>
-            <img src={user.photoURL} alt="Image" />
-          </div>
+          <h3>Email: {user.email}</h3>
+          <img src={user.photoURL} alt="profile" />
         </div>
     </>
   )
