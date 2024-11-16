@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { FaEye, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const NewCarts = (props = {}) => {
     const { news } = props || {};
-    console.log(news);
     return (
         <div className="card w-full bg-white shadow-lg rounded-lg overflow-hidden mt-2">
 
@@ -26,7 +26,7 @@ const NewCarts = (props = {}) => {
 
                 {/* Tag List */}
                 <div className="text-gray-500 text-sm mb-2">
-                    {news.details.slice(0, 100)}...
+                    {news.details.slice(0, 100)}... <Link to={`/news/${news._id}`}>Read more</Link>
                 </div>
 
                 {/* Card Footer */}

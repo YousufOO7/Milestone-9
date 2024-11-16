@@ -4,7 +4,6 @@ import NewCarts from './NewCarts';
 
 const CategoryNews = props => {
     const { data: news } = useLoaderData();
-    console.log(news);
     return (
         <div>
             <h3 className="text-lg font-semibold">Dragon News Home</h3>
